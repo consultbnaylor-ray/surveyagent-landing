@@ -380,6 +380,49 @@
       border-radius: var(--radius-md);
     }
 
+    /* ===== FREE BANNER (referrer page) ===== */
+    .free-banner {
+      background: linear-gradient(90deg, #f27f0c 0%, #e06500 100%);
+      text-align: center;
+      padding: 0.85rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .free-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.04) 10px,
+        rgba(255,255,255,0.04) 20px
+      );
+      pointer-events: none;
+    }
+    .free-banner p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #fff;
+      font-size: var(--text-base);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .free-banner .free-tag {
+      display: inline-block;
+      background: #fff;
+      color: #e06500;
+      font-weight: 800;
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+      margin-right: 0.4em;
+      font-size: 0.95em;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
     /* ===== SALES PAGE HERO ===== */
     .sales-hero {
       background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 50%, var(--navy-deeper) 100%);
@@ -793,6 +836,10 @@
         <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta">Get Started</a>
       </div>
     </nav>
+
+    <div class="free-banner">
+      <p><span class="free-tag">100% Free</span> for Estate Agents, Conveyancers, Solicitors &amp; other Referrers</p>
+    </div>
 
     <section class="sales-hero">
       <div class="sales-hero-content">
