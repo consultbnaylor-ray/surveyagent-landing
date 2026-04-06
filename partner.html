@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Relationship Manager — SurveyAgent</title>
+  <meta name="description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <meta property="og:title" content="Become a Relationship Manager — SurveyAgent">
+  <meta property="og:description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://surveyagent.co.uk/partner">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Become a Relationship Manager — SurveyAgent">
+  <meta name="twitter:description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='2' width='28' height='28' rx='6' stroke='%23f27f0c' stroke-width='2.5'/%3E%3Cpath d='M10 22V14L16 10L22 14V22' stroke='%23f27f0c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='3' stroke='%23f27f0c' stroke-width='2'/%3E%3C/svg%3E">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --navy: #1b294a;
+      --navy-dark: #111c36;
+      --navy-deeper: #0a1225;
+      --orange: #f27f0c;
+      --orange-hover: #d96f08;
+      --orange-glow: rgba(242, 127, 12, 0.15);
+      --orange-light: rgba(242, 127, 12, 0.1);
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #f0f2f5;
+      --gray-200: #e2e5eb;
+      --gray-300: #c8cdd6;
+      --gray-400: #8b95a5;
+      --gray-500: #6b7688;
+      --gray-600: #4a5568;
+      --gray-700: #2d3748;
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.375rem);
+      --text-xl: clamp(1.375rem, 1.1rem + 1.2vw, 2rem);
+      --text-2xl: clamp(1.75rem, 1.1rem + 2.2vw, 3rem);
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.125rem;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 32px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.05);
+      --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-med: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--gray-700);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; background: none; border: none; font: inherit; }
+
+    /* ===== SCROLL REVEAL ===== */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-reveal-child] > * {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-reveal-child].is-visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-reveal-child].is-visible > *:nth-child(1) { transition-delay: 0s; }
+    [data-reveal-child].is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+    [data-reveal-child].is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+    [data-reveal-child].is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+    [data-reveal-child].is-visible > *:nth-child(5) { transition-delay: 0.32s; }
+    [data-reveal-child].is-visible > *:nth-child(6) { transition-delay: 0.40s; }
+
+    /* ===== STICKY NAV ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity var(--transition-fast);
+    }
+    .nav-logo:hover { opacity: 0.7; }
+    .nav-logo svg { width: 30px; height: 30px; }
+    .nav-logo .wordmark {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      font-weight: 500;
+      transition: color var(--transition-fast);
+    }
+    .nav-links a:hover { color: var(--navy); }
+
+    .nav-back {
+      font-size: var(--text-sm);
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color var(--transition-fast);
+      font-weight: 500;
+    }
+    .nav-back:hover { color: var(--navy); }
+    .nav-back svg {
+      width: 16px; height: 16px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .nav-hamburger {
+      display: none;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition-fast);
+    }
+    .nav-hamburger:hover { background: var(--gray-100); }
+    .nav-hamburger svg {
+      width: 20px; height: 20px;
+      stroke: var(--navy); fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.575rem 1.25rem;
+      background: var(--orange);
+      color: var(--white);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-cta:hover {
+      background: var(--orange-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(242,127,12,0.3);
+    }
+
+    .btn-cta-lg {
+      padding: 0.8rem 1.75rem;
+      font-size: var(--text-base);
+      border-radius: var(--radius-md);
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1rem 1.5rem;
+      z-index: 99;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu.is-open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 0;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--gray-600);
+      border-bottom: 1px solid var(--gray-100);
+      transition: color var(--transition-fast);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--orange); }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ===== HERO ===== */
+    .sales-hero {
+      background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 50%, var(--navy-deeper) 100%);
+      padding: clamp(4rem, 8vw, 6.5rem) 1.5rem clamp(3.5rem, 7vw, 5rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sales-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 500px 350px at 65% 30%, rgba(242,127,12,0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 250px at 35% 80%, rgba(242,127,12,0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .sales-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+    }
+
+    .sales-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+      margin: 0 auto;
+      animation: heroIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .sales-hero h1 {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+    .sales-hero h1 span { color: var(--orange); }
+
+    .sales-hero p {
+      font-size: var(--text-base);
+      color: rgba(255,255,255,0.55);
+      line-height: 1.55;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    .sales-hero .btn-cta {
+      animation: heroIn 0.7s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+    }
+
+    .section-alt { background: var(--gray-50); }
+
+    .section-navy {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .section-navy::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 400px 250px at 50% 50%, rgba(242,127,12,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .section-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .section-navy .section-title { color: var(--white); }
+    .section-navy .section-label { color: var(--orange); }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      position: relative;
+    }
+
+    @media (min-width: 861px) {
+      .steps-grid::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: calc(16.667% + 1.25rem);
+        right: calc(16.667% + 1.25rem);
+        height: 2px;
+        background: linear-gradient(90deg, var(--gray-200) 0%, var(--gray-200) 100%);
+        background-size: 8px 2px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .steps-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    }
+
+    .step-item { text-align: center; position: relative; }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(27,41,74,0.15);
+    }
+
+    .step-item h3 {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .step-item p {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.5;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    /* ===== BENEFIT CARDS ===== */
+    .benefit-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .benefit-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+    @media (max-width: 860px) {
+      .benefit-grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 1.75rem;
+      transition: all var(--transition-med);
+    }
+
+    .section-alt .benefit-card { background: var(--white); }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gray-300);
+    }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--orange-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .benefit-card h3 {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.375rem;
+      letter-spacing: -0.01em;
+    }
+
+    .benefit-card p {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+
+    .benefit-bottom-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 720px;
+      margin: 1rem auto 0;
+    }
+
+    @media (max-width: 860px) {
+      .benefit-bottom-row { grid-template-columns: 1fr; max-width: 100%; }
+    }
+
+    /* ===== PERSONA CARDS ===== */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .persona-grid { grid-template-columns: 1fr; }
+    }
+
+    .persona-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 1.75rem;
+      transition: all var(--transition-med);
+    }
+
+    .persona-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gray-300);
+    }
+
+    .persona-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(27,41,74,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .persona-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--navy); fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .persona-card h3 {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.375rem;
+      letter-spacing: -0.01em;
+    }
+
+    .persona-card p {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+
+    /* ===== CALCULATOR ===== */
+    .calc-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .calc-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+    }
+
+    .calc-field {
+      margin-bottom: 1.5rem;
+    }
+
+    .calc-field label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.625rem;
+    }
+
+    .calc-field label .calc-val {
+      font-weight: 700;
+      color: var(--white);
+      font-size: var(--text-base);
+    }
+
+    .calc-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.12);
+      outline: none;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--orange);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(242,127,12,0.4);
+      transition: transform var(--transition-fast);
+    }
+    .calc-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    .calc-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--orange);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 8px rgba(242,127,12,0.4);
+    }
+
+    .calc-result {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .calc-result-label {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.25rem;
+    }
+
+    .calc-result-value {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    .calc-result-annual {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.25rem;
+    }
+
+    .calc-result-annual strong {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== APPLICATION FORM ===== */
+    .form-card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+    }
+
+    .section-alt .form-card { background: var(--white); }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.375rem;
+    }
+
+    .form-group label .optional {
+      font-weight: 400;
+      color: var(--gray-400);
+      font-size: var(--text-xs);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.65rem 0.875rem;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      background: var(--white);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px var(--orange-glow);
+    }
+
+    .form-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238b95a5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.875rem center;
+      padding-right: 2.5rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .form-success.is-visible { display: block; }
+
+    .form-success-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(34,197,94,0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-success-icon svg {
+      width: 28px; height: 28px;
+      stroke: #22c55e; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .form-success h3 {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+
+    .form-success a {
+      color: var(--orange);
+      font-weight: 600;
+    }
+    .form-success a:hover { text-decoration: underline; }
+
+    /* ===== CTA BAND ===== */
+    .cta-band {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 400px 250px at 50% 50%, rgba(242,127,12,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-band h2 {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band p {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band .btn-cta { position: relative; z-index: 1; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-logo svg { width: 26px; height: 26px; }
+    .footer-logo .wordmark {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: var(--text-xs);
+    }
+
+    .footer-links a {
+      color: var(--gray-500);
+      transition: color var(--transition-fast);
+      font-weight: 500;
+    }
+    .footer-links a:hover { color: var(--orange); }
+
+    .footer-copy {
+      font-size: var(--text-xs);
+      color: var(--gray-400);
+    }
+
+    /* ===== MOBILE REFINEMENTS ===== */
+    @media (max-width: 540px) {
+      .nav-inner { height: 52px; }
+      .benefit-card, .persona-card { padding: 1.375rem; }
+      .section { padding: clamp(2.5rem, 5vw, 3.5rem) 1.25rem; }
+      .sales-hero { padding: clamp(3rem, 7vw, 4.5rem) 1.25rem clamp(2.5rem, 5vw, 3.5rem); }
+      .calc-card { padding: 1.5rem; }
+      .form-card { padding: 1.5rem; }
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="https://surveyagent.co.uk" class="nav-logo" aria-label="SurveyAgent home">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="6" stroke="#f27f0c" stroke-width="2.5"/><path d="M10 22V14L16 10L22 14V22" stroke="#f27f0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#f27f0c" stroke-width="2"/></svg>
+          <span class="wordmark">SurveyAgent</span>
+        </a>
+        <div class="nav-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#apply">Apply Now</a>
+          <a href="https://surveyagent.co.uk" class="nav-back">
+            <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            Back to SurveyAgent
+          </a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button class="nav-hamburger" aria-label="Open menu" id="hamburger">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="#apply" class="btn-cta">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#apply">Apply Now</a>
+    <a href="https://surveyagent.co.uk">Back to SurveyAgent</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="sales-hero">
+    <div class="sales-hero-content">
+      <h1>Build a Network. <span>Earn Forever.</span></h1>
+      <p>Become a SurveyAgent Relationship Manager — earn 5% commission on every survey that flows through the estate agents and surveyors you recruit. No fees. No risk. No cap.</p>
+      <a href="#apply" class="btn-cta btn-cta-lg">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Three Steps to Earning</h2>
+      </div>
+      <div class="steps-grid" data-reveal-child>
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h3>Sign Up for Free</h3>
+          <p>Register as a Relationship Manager in 60 seconds. You get your own dashboard and unique invite link.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h3>Recruit Your Network</h3>
+          <p>Share your invite link with estate agents and surveyors. Anyone who signs up is permanently tagged to you.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h3>Earn Commission</h3>
+          <p>Every time a survey is booked through your network, you earn 5%. Paid to your bank within 14 days via Stripe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="section" id="benefits">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">Benefits</div>
+        <h2 class="section-title">Why Become a Relationship Manager</h2>
+      </div>
+      <div class="benefit-grid benefit-grid-3" data-reveal-child>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Always Free</h3>
+          <p>No subscription fees, no setup costs, zero financial risk. You only earn — you never pay.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2v20"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3>Passive Income</h3>
+          <p>Unlike one-off referral fees, you earn on every survey your network generates — indefinitely. Build it once, earn forever.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Real-Time Dashboard</h3>
+          <p>Track your recruited accounts, leads, and commission in real time. No chasing spreadsheets or waiting for monthly reports.</p>
+        </div>
+      </div>
+      <div class="benefit-bottom-row" data-reveal-child>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>14-Day Payouts</h3>
+          <p>Connect your Stripe account and get paid within 14 days of each completed survey. Automated, reliable, hassle-free.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <h3>Your Own Invite Link</h3>
+          <p>Get a unique link to share on LinkedIn, in emails, or in person. Everyone who signs up through it is permanently yours.</p>
+        </div>
+      </div>
+      <div class="benefit-bottom-row" style="margin-top: 1rem;" data-reveal-child>
+        <div class="benefit-card" style="grid-column: 1 / -1; max-width: 360px; margin: 0 auto;">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="10" r="3"/>
+              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/>
+            </svg>
+          </div>
+          <h3>No Territory Restrictions</h3>
+          <p>Recruit estate agents and surveyors anywhere in the UK. There's no postcode cap and no exclusivity — the more you recruit, the more you earn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO IS THIS FOR ===== -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">Who Is This For</div>
+        <h2 class="section-title">Perfect For People Like You</h2>
+      </div>
+      <div class="persona-grid" data-reveal-child>
+        <div class="persona-card">
+          <div class="persona-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 21h18"/>
+              <path d="M5 21V7l7-4 7 4v14"/>
+              <rect x="9" y="13" width="6" height="8" rx="0.5"/>
+              <rect x="10" y="9" width="4" height="3" rx="0.5"/>
+            </svg>
+          </div>
+          <h3>Retired Estate Agents &amp; Surveyors</h3>
+          <p>You've left the industry but still have a deep contact book. Turn those relationships into a passive income stream without going back to work.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a4 4 0 00-8 0v2"/>
+              <circle cx="12" cy="14" r="2"/>
+            </svg>
+          </div>
+          <h3>Mortgage Brokers</h3>
+          <p>You already sit at the centre of every property transaction. Recruit your estate agent and surveyor contacts — earn on both sides.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3>Property Networking Groups</h3>
+          <p>If you know people in property, you can earn from connecting them to SurveyAgent. No industry experience required.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-4"/>
+            </svg>
+          </div>
+          <h3>Entrepreneurial Types</h3>
+          <p>Think of it as a franchise without the franchise fee. Build your own regional network of property professionals with zero upfront cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMISSION CALCULATOR ===== -->
+  <section class="section section-navy" id="calculator">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">Commission Calculator</div>
+        <h2 class="section-title">See What You Could Earn</h2>
+      </div>
+      <div class="calc-wrapper" data-reveal>
+        <div class="calc-card">
+          <div class="calc-field">
+            <label>
+              How many estate agents could you recruit?
+              <span class="calc-val" id="agents-val">10</span>
+            </label>
+            <input type="range" class="calc-slider" id="agents-slider" min="1" max="50" value="10">
+          </div>
+          <div class="calc-field">
+            <label>
+              Average surveys per agent per month
+              <span class="calc-val" id="surveys-val">5</span>
+            </label>
+            <input type="range" class="calc-slider" id="surveys-slider" min="2" max="20" value="5">
+          </div>
+          <div class="calc-field">
+            <label>
+              Average survey fee
+              <span class="calc-val" id="fee-val">&pound;450</span>
+            </label>
+            <input type="range" class="calc-slider" id="fee-slider" min="200" max="800" step="10" value="450">
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-label">Your estimated monthly commission</div>
+            <div class="calc-result-value" id="monthly-result">&pound;1,125</div>
+            <div class="calc-result-annual">That's <strong id="annual-result">&pound;13,500</strong> per year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPLICATION FORM ===== -->
+  <section class="section section-alt" id="apply">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Ready to Start Earning?</h2>
+      </div>
+      <div data-reveal>
+        <div class="form-card" id="form-card">
+          <form id="apply-form" novalidate>
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="fullName" class="form-input" required placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="07700 900000">
+            </div>
+            <div class="form-group">
+              <label for="background">Your network / background <span class="optional">(optional)</span></label>
+              <textarea id="background" name="background" class="form-textarea" placeholder="Tell us a bit about your connections in the property industry..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="source">How did you hear about us?</label>
+              <select id="source" name="source" class="form-select">
+                <option value="">Select one...</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="word-of-mouth">Word of Mouth</option>
+                <option value="google">Google</option>
+                <option value="property-event">Property Event</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-cta btn-cta-lg form-submit">Apply to Join</button>
+          </form>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Application Received!</h3>
+          <p>Thanks! We'll review your application and be in touch within 24 hours.<br>In the meantime, feel free to <a href="mailto:info@surveyagent.co.uk">email us</a> with any questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="6" stroke="#f27f0c" stroke-width="2.5"/><path d="M10 22V14L16 10L22 14V22" stroke="#f27f0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#f27f0c" stroke-width="2"/></svg>
+        <span class="wordmark">SurveyAgent</span>
+      </div>
+      <div class="footer-copy">A product by Quantica Labs Ltd</div>
+      <div class="footer-links">
+        <a href="https://surveyagent.co.uk/privacy">Privacy Policy</a>
+        <a href="https://surveyagent.co.uk/terms">Terms of Service</a>
+        <a href="mailto:info@surveyagent.co.uk">Contact</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Quantica Labs Ltd</div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== MOBILE MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('is-open');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('is-open'));
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          mobileMenu.classList.remove('is-open');
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('[data-reveal], [data-reveal-child]').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ===== COMMISSION CALCULATOR =====
+    const agentsSlider = document.getElementById('agents-slider');
+    const surveysSlider = document.getElementById('surveys-slider');
+    const feeSlider = document.getElementById('fee-slider');
+    const agentsVal = document.getElementById('agents-val');
+    const surveysVal = document.getElementById('surveys-val');
+    const feeVal = document.getElementById('fee-val');
+    const monthlyResult = document.getElementById('monthly-result');
+    const annualResult = document.getElementById('annual-result');
+
+    function formatCurrency(n) {
+      return '\u00A3' + n.toLocaleString('en-GB');
+    }
+
+    function updateCalc() {
+      const agents = parseInt(agentsSlider.value);
+      const surveys = parseInt(surveysSlider.value);
+      const fee = parseInt(feeSlider.value);
+
+      agentsVal.textContent = agents;
+      surveysVal.textContent = surveys;
+      feeVal.textContent = formatCurrency(fee);
+
+      const monthly = agents * surveys * fee * 0.05;
+      const annual = monthly * 12;
+
+      monthlyResult.textContent = formatCurrency(monthly);
+      annualResult.textContent = formatCurrency(annual);
+    }
+
+    agentsSlider.addEventListener('input', updateCalc);
+    surveysSlider.addEventListener('input', updateCalc);
+    feeSlider.addEventListener('input', updateCalc);
+
+    // ===== APPLICATION FORM =====
+    const form = document.getElementById('apply-form');
+    const formCard = document.getElementById('form-card');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const data = {
+        fullName: form.fullName.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        background: form.background.value.trim(),
+        source: form.source.value,
+      };
+
+      // Basic validation
+      if (!data.fullName || !data.email) return;
+
+      try {
+        await fetch('https://app.surveyagent.co.uk/api/rm/apply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } catch (_) {
+        // Show success regardless
+      }
+
+      formCard.style.display = 'none';
+      formSuccess.classList.add('is-visible');
+    });
+  </script>
+</body>
+</html>
