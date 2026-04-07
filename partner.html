@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Become a Relationship Manager — SurveyAgent</title>
-  <meta name="description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <meta name="description" content="Earn 5% commission on every property survey by recruiting estate agents to SurveyAgent. Build the surveyor network. Free to join, no cap on earnings.">
   <meta property="og:title" content="Become a Relationship Manager — SurveyAgent">
-  <meta property="og:description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <meta property="og:description" content="Earn 5% commission on every property survey by recruiting estate agents to SurveyAgent. Build the surveyor network. Free to join, no cap on earnings.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://surveyagent.co.uk/partner">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Become a Relationship Manager — SurveyAgent">
-  <meta name="twitter:description" content="Earn 5% commission on every property survey by recruiting estate agents and surveyors to SurveyAgent. Free to join, no cap on earnings.">
+  <meta name="twitter:description" content="Earn 5% commission on every property survey by recruiting estate agents to SurveyAgent. Build the surveyor network. Free to join, no cap on earnings.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -554,6 +554,95 @@
       line-height: 1.55;
     }
 
+    /* ===== MARKET OPPORTUNITY ===== */
+    .opportunity-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .opportunity-main {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .opportunity-highlight {
+      flex-shrink: 0;
+      background: rgba(242, 127, 12, 0.1);
+      border: 1px solid rgba(242, 127, 12, 0.25);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .opportunity-stat {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1.1;
+    }
+
+    .opportunity-stat-label {
+      font-size: var(--text-sm);
+      color: var(--gray-300);
+      margin-top: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .opportunity-text p {
+      color: var(--gray-300);
+      font-size: var(--text-base);
+      line-height: 1.7;
+    }
+
+    .opportunity-text strong {
+      color: var(--white);
+    }
+
+    .opportunity-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .opportunity-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .opportunity-card:hover {
+      border-color: rgba(242, 127, 12, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .opportunity-card h3 {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .opportunity-card p {
+      font-size: var(--text-sm);
+      color: var(--gray-400);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 768px) {
+      .opportunity-main {
+        flex-direction: column;
+        text-align: center;
+      }
+      .opportunity-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ===== CALCULATOR ===== */
     .calc-wrapper {
       max-width: 560px;
@@ -910,7 +999,7 @@
   <section class="sales-hero">
     <div class="sales-hero-content">
       <h1>Build a Network. <span>Earn Forever.</span></h1>
-      <p>Become a SurveyAgent Relationship Manager — earn 5% commission on every survey that flows through the estate agents and surveyors you recruit. No fees. No risk. No cap.</p>
+      <p>Become a SurveyAgent Relationship Manager — earn 5% commission on every survey that flows through the estate agents you recruit. Build the surveyor network. Shape the market. No fees. No risk. No cap.</p>
       <a href="#apply" class="btn-cta btn-cta-lg">Apply Now</a>
     </div>
   </section>
@@ -931,12 +1020,12 @@
         <div class="step-item">
           <div class="step-number">2</div>
           <h3>Recruit Your Network</h3>
-          <p>Share your invite link with estate agents and surveyors. Anyone who signs up is permanently tagged to you.</p>
+          <p>Sign up estate agents — you earn 5% on every survey they send through. Sign up surveyors to build capacity in each area and ensure fast turnaround for your agents.</p>
         </div>
         <div class="step-item">
           <div class="step-number">3</div>
           <h3>Earn Commission</h3>
-          <p>Every time a survey is booked through your network, you earn 5%. Paid to your bank within 14 days via Stripe.</p>
+          <p>Every time a survey is booked through an estate agent you recruited, you earn 5%. Paid to your bank within 14 days via Stripe.</p>
         </div>
       </div>
     </div>
@@ -1048,7 +1137,7 @@
             </svg>
           </div>
           <h3>Mortgage Brokers</h3>
-          <p>You already sit at the centre of every property transaction. Recruit your estate agent and surveyor contacts — earn on both sides.</p>
+          <p>You already sit at the centre of every property transaction. Recruit estate agents to earn commission, and sign up surveyors to ensure your network has capacity in every area.</p>
         </div>
         <div class="persona-card">
           <div class="persona-icon">
@@ -1077,8 +1166,44 @@
     </div>
   </section>
 
+  <!-- ===== MARKET OPPORTUNITY ===== -->
+  <section class="section section-navy">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <div class="section-label">Market Opportunity</div>
+        <h2 class="section-title">Why Now Is the Time</h2>
+      </div>
+      <div class="opportunity-content" data-reveal>
+        <div class="opportunity-main">
+          <div class="opportunity-highlight">
+            <div class="opportunity-stat">Mandatory</div>
+            <div class="opportunity-stat-label">Seller surveys are coming</div>
+          </div>
+          <div class="opportunity-text">
+            <p>The UK is moving towards requiring a property survey when selling a home. When this regulation lands, demand for surveyors will increase dramatically — and the estate agents who already have a fast, reliable surveying network in place will have a massive advantage.</p>
+            <p style="margin-top: 1rem;">That's where you come in. By building this network <strong>now</strong>, you're positioning yourself at the centre of the market before the wave hits.</p>
+          </div>
+        </div>
+        <div class="opportunity-cards">
+          <div class="opportunity-card">
+            <h3>Your Agents Earn More</h3>
+            <p>Estate agents you recruit get access to a fast, automated surveying pipeline. Faster surveys mean faster completions and happier clients.</p>
+          </div>
+          <div class="opportunity-card">
+            <h3>Your Surveyors Stay Busy</h3>
+            <p>Surveyors you recruit get a steady flow of work from the estate agent network. You don't earn commission on their jobs directly — but a busy surveyor means a fast service, which means more estate agents want to join.</p>
+          </div>
+          <div class="opportunity-card">
+            <h3>Reduced Conflict of Interest</h3>
+            <p>When estate agents don't specify a surveyor, SurveyAgent matches leads to the best available firm by postcode. An independent network removes the bias and builds trust with homebuyers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== COMMISSION CALCULATOR ===== -->
-  <section class="section section-navy" id="calculator">
+  <section class="section section-alt" id="calculator">
     <div class="section-inner">
       <div class="section-header" data-reveal>
         <div class="section-label">Commission Calculator</div>
