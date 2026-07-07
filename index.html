@@ -713,6 +713,129 @@
 
     .cta-band .btn-cta { position: relative; z-index: 1; }
 
+    /* ===== PRICING ===== */
+    .section-subtitle {
+      max-width: 620px;
+      margin: 0.5rem auto 0;
+      color: var(--gray-500);
+      font-size: var(--text-base);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+    .pricing-card {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-med), box-shadow var(--transition-med);
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .pricing-card-featured {
+      border: 2px solid var(--orange);
+      box-shadow: 0 8px 32px var(--orange-glow);
+      transform: scale(1.02);
+    }
+    .pricing-card-featured:hover { transform: translateY(-4px) scale(1.02); }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pricing-tier {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .pricing-price {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-price span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gray-500);
+    }
+    .pricing-audience {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      margin-bottom: 1.25rem;
+      min-height: 2.5em;
+    }
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      flex: 1;
+    }
+    .pricing-features li {
+      position: relative;
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      font-size: 0.925rem;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0.4rem;
+      color: var(--orange);
+      font-weight: 700;
+    }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    .pricing-addons {
+      margin: 2rem auto 0;
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 0.925rem;
+      max-width: 720px;
+    }
+    .pricing-fineprint {
+      margin: 0.75rem auto 0;
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.825rem;
+      max-width: 720px;
+    }
+    @media (max-width: 860px) {
+      .pricing-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .pricing-card-featured { transform: none; }
+      .pricing-card-featured:hover { transform: translateY(-4px); }
+    }
+
     /* ===== FOOTER ===== */
     .footer {
       padding: 1.25rem;
@@ -1044,17 +1167,94 @@
             <div class="stat-desc">Leads go to the right surveyor in seconds</div>
           </div>
           <div class="stat-card">
-            <div class="stat-value">&pound;0</div>
-            <div class="stat-label">Zero Setup Fee</div>
-            <div class="stat-desc">Free for Levels app users</div>
+            <div class="stat-value">From &pound;49<span style="font-size:0.4em;font-weight:400;opacity:0.75">/mo</span></div>
+            <div class="stat-label">Simple Monthly Pricing</div>
+            <div class="stat-desc">Free trial &middot; Cancel anytime</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ============================================================
+         PRICING COMPARISON
+         Three tiers surveyors can pick from. Copy kept tight so it
+         reads at a glance in a sales meeting. AI phone agent + SMS
+         are called out as add-ons at the bottom so nobody thinks
+         they're bundled.
+         ============================================================ -->
+    <section class="section section-alt" id="pricing" data-reveal>
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-label">Pricing</div>
+          <h2 class="section-title">Choose the plan that fits your firm</h2>
+          <p class="section-subtitle">All plans include the core CRM, diary and lead management. Upgrade any time.</p>
+        </div>
+        <div class="pricing-grid" data-reveal-child>
+          <!-- Starter -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Starter</div>
+            <div class="pricing-price">&pound;49<span>/mo</span></div>
+            <div class="pricing-audience">Solo surveyors getting started</div>
+            <ul class="pricing-features">
+              <li>Lead capture &amp; pipeline management</li>
+              <li>Diary &amp; calendar with drag-and-drop booking</li>
+              <li>Manual invoicing &amp; quotes</li>
+              <li>SMS pay-as-you-go</li>
+              <li>Email templates &amp; automations</li>
+              <li>Single user</li>
+            </ul>
+            <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta pricing-cta">Start free trial</a>
+          </div>
+
+          <!-- Professional (most popular) -->
+          <div class="pricing-card pricing-card-featured">
+            <div class="pricing-badge">Most popular</div>
+            <div class="pricing-tier">Professional</div>
+            <div class="pricing-price">&pound;129<span>/mo</span></div>
+            <div class="pricing-audience">Growing firms</div>
+            <ul class="pricing-features">
+              <li>Everything in Starter</li>
+              <li><strong>Xero integration</strong> &mdash; automated invoicing</li>
+              <li>Stripe payment links &amp; auto-reconciliation</li>
+              <li>SMS allowance included</li>
+              <li>Automated review requests</li>
+              <li>Estate-agent commission tracking</li>
+            </ul>
+            <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta pricing-cta">Start free trial</a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">&pound;299<span>/mo</span></div>
+            <div class="pricing-audience">Multi-surveyor firms</div>
+            <ul class="pricing-features">
+              <li>Everything in Professional</li>
+              <li>Multi-user with per-surveyor diary</li>
+              <li>Priority support</li>
+              <li>Custom onboarding &amp; training</li>
+              <li>Advanced reporting &amp; exports</li>
+              <li>Bespoke integrations on request</li>
+            </ul>
+            <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta pricing-cta">Start free trial</a>
+          </div>
+        </div>
+
+        <p class="pricing-addons">
+          <strong>Add-ons available on any plan:</strong>
+          AI phone agent (priced per firm) &middot;
+          Additional SMS bundles &middot;
+          Extra surveyor seats
+        </p>
+        <p class="pricing-fineprint">
+          All prices exclude VAT. Free trial available on every plan &mdash; no card required. Cancel any time; monthly rolling. Existing Levels app users retain their current arrangement.
+        </p>
+      </div>
+    </section>
+
     <section class="cta-band" data-reveal>
-      <h2>Get Started Free</h2>
-      <p>No setup fee for Levels app users. Start managing your leads today.</p>
+      <h2>Try SurveyAgent free</h2>
+      <p>Free trial on every plan &middot; Cancel anytime &middot; Monthly rolling</p>
       <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta btn-cta-lg">Get Started Free</a>
     </section>
 
