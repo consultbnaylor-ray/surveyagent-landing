@@ -380,6 +380,27 @@
       border-radius: var(--radius-md);
     }
 
+    .btn-cta-outline {
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+      padding: 0.65rem 1.55rem; /* compensate for border so height matches btn-cta-lg */
+    }
+    .btn-cta-outline:hover {
+      background: var(--orange);
+      color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(242,127,12,0.3);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
     /* ===== FREE BANNER (referrer page) ===== */
     .free-banner {
       background: linear-gradient(90deg, #f27f0c 0%, #e06500 100%);
@@ -1093,6 +1114,10 @@
         <h1>All Your Leads. <span>One Dashboard.</span></h1>
         <p>Manage leads from every source in a single powerful console. Reallymoving, Pinlocal, referral agents — all unified, all actionable.</p>
         <p>Full CRM with diary, SMS and Xero integration to streamline your invoicing.</p>
+        <div class="hero-cta-row">
+          <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta btn-cta-lg">Get Started</a>
+          <a href="mailto:info@francisray.co.uk?subject=Book%20a%20SurveyAgent%20Demo" class="btn-cta btn-cta-lg btn-cta-outline">Book a Demo</a>
+        </div>
       </div>
     </section>
 
