@@ -401,6 +401,117 @@
       margin-top: 1.5rem;
     }
 
+    /* ── Book a Demo modal ─────────────────────────────────────── */
+    .demo-modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(2px);
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 1000;
+      padding: 2.5rem 1rem;
+      overflow-y: auto;
+    }
+    .demo-modal-backdrop.open { display: flex; }
+    .demo-modal {
+      background: var(--white, #fff);
+      border-radius: var(--radius-lg, 14px);
+      max-width: 480px;
+      width: 100%;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .demo-modal h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.5rem;
+      color: var(--text, #111);
+    }
+    .demo-modal p.demo-lead {
+      margin: 0 0 1.25rem;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+    .demo-modal-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: transparent;
+      border: 0;
+      width: 2rem; height: 2rem;
+      cursor: pointer;
+      font-size: 1.35rem;
+      line-height: 1;
+      color: #666;
+      border-radius: 999px;
+    }
+    .demo-modal-close:hover { background: rgba(0,0,0,0.05); color: #111; }
+    .demo-field { margin-bottom: 0.9rem; }
+    .demo-field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.01em;
+    }
+    .demo-field input,
+    .demo-field textarea {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid #d4d1ca;
+      border-radius: var(--radius-md, 8px);
+      font: inherit;
+      font-size: 0.95rem;
+      background: #fff;
+      color: #111;
+      box-sizing: border-box;
+    }
+    .demo-field input:focus,
+    .demo-field textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(242,127,12,0.15);
+    }
+    .demo-field textarea { resize: vertical; min-height: 88px; }
+    .demo-submit {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: var(--orange);
+      color: #fff;
+      border: 0;
+      border-radius: var(--radius-md, 8px);
+      cursor: pointer;
+      transition: background var(--transition-fast, 0.15s);
+    }
+    .demo-submit:hover:not(:disabled) { background: var(--orange-hover, #e06500); }
+    .demo-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    .demo-error {
+      margin-top: 0.75rem;
+      color: #b91c1c;
+      font-size: 0.85rem;
+      min-height: 1.2em;
+    }
+    .demo-success {
+      text-align: center;
+      padding: 1rem 0.5rem 0.25rem;
+    }
+    .demo-success .demo-tick {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px;
+      border-radius: 999px;
+      background: rgba(16,185,129,0.12);
+      color: #059669;
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .demo-success h3 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+    .demo-success p { margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5; }
+
     /* ===== FREE BANNER (referrer page) ===== */
     .free-banner {
       background: linear-gradient(90deg, #f27f0c 0%, #e06500 100%);
@@ -1116,7 +1227,7 @@
         <p>Full CRM with diary, SMS and Xero integration to streamline your invoicing.</p>
         <div class="hero-cta-row">
           <a href="https://app.surveyagent.co.uk/#/register" class="btn-cta btn-cta-lg">Get Started</a>
-          <a href="mailto:info@francisray.co.uk?subject=Book%20a%20SurveyAgent%20Demo" class="btn-cta btn-cta-lg btn-cta-outline">Book a Demo</a>
+          <button type="button" class="btn-cta btn-cta-lg btn-cta-outline" data-open-demo>Book a Demo</button>
         </div>
       </div>
     </section>
@@ -1358,6 +1469,131 @@
         revealObserver.observe(el);
       });
     }
+  </script>
+  <!-- ==================== BOOK A DEMO MODAL ==================== -->
+  <div class="demo-modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <div class="demo-modal">
+      <button type="button" class="demo-modal-close" aria-label="Close" data-close-demo>×</button>
+      <div id="demoFormWrap">
+        <h2 id="demoModalTitle">Book a demo</h2>
+        <p class="demo-lead">A member of the team will reach out within one working day to arrange a walkthrough.</p>
+        <form id="demoForm" novalidate>
+          <div class="demo-field">
+            <label for="demoName">Your name *</label>
+            <input id="demoName" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="demo-field">
+            <label for="demoCompany">Company</label>
+            <input id="demoCompany" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="demo-field">
+            <label for="demoEmail">Email *</label>
+            <input id="demoEmail" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="demo-field">
+            <label for="demoPhone">Phone</label>
+            <input id="demoPhone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="demo-field">
+            <label for="demoNotes">Anything you'd like us to cover?</label>
+            <textarea id="demoNotes" name="notes" placeholder="Optional — e.g. we're a 3-surveyor firm doing 40+ Level 2s a month."></textarea>
+          </div>
+          <button type="submit" class="demo-submit" id="demoSubmit">Request my demo</button>
+          <div class="demo-error" id="demoError" role="alert"></div>
+        </form>
+      </div>
+      <div id="demoSuccessWrap" class="demo-success" hidden>
+        <div class="demo-tick" aria-hidden="true">✓</div>
+        <h3>Thanks — we'll be in touch</h3>
+        <p>A member of the team will reach out within one working day to arrange your demo. We've also sent a confirmation to your inbox.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var API_ENDPOINT = "https://app.surveyagent.co.uk/api/demo-request";
+      var modal = document.getElementById("demoModal");
+      var form = document.getElementById("demoForm");
+      var errorBox = document.getElementById("demoError");
+      var submitBtn = document.getElementById("demoSubmit");
+      var formWrap = document.getElementById("demoFormWrap");
+      var successWrap = document.getElementById("demoSuccessWrap");
+      var lastFocused = null;
+
+      function openModal() {
+        lastFocused = document.activeElement;
+        // Reset to form view each open
+        formWrap.hidden = false;
+        successWrap.hidden = true;
+        errorBox.textContent = "";
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        setTimeout(function () { document.getElementById("demoName").focus(); }, 30);
+      }
+      function closeModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
+      }
+
+      document.querySelectorAll("[data-open-demo]").forEach(function (btn) {
+        btn.addEventListener("click", function (e) { e.preventDefault(); openModal(); });
+      });
+      document.querySelectorAll("[data-close-demo]").forEach(function (btn) {
+        btn.addEventListener("click", closeModal);
+      });
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        errorBox.textContent = "";
+        var payload = {
+          name: document.getElementById("demoName").value.trim(),
+          company: document.getElementById("demoCompany").value.trim(),
+          email: document.getElementById("demoEmail").value.trim(),
+          phone: document.getElementById("demoPhone").value.trim(),
+          notes: document.getElementById("demoNotes").value.trim()
+        };
+        if (!payload.name || !payload.email) {
+          errorBox.textContent = "Name and email are required.";
+          return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+        fetch(API_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        })
+          .then(function (res) {
+            return res.json().catch(function () { return {}; }).then(function (body) {
+              return { ok: res.ok, body: body };
+            });
+          })
+          .then(function (r) {
+            if (!r.ok) {
+              errorBox.textContent = (r.body && r.body.error) || "Couldn't send your request — please email info@surveyagent.co.uk.";
+              return;
+            }
+            formWrap.hidden = true;
+            successWrap.hidden = false;
+            form.reset();
+          })
+          .catch(function () {
+            errorBox.textContent = "Network error — please email info@surveyagent.co.uk.";
+          })
+          .then(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Request my demo";
+          });
+      });
+    })();
   </script>
 </body>
 </html>
