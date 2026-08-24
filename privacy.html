@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | SurveyAgent</title>
+  <meta name="description" content="How Quantica Labs Ltd, trading as SurveyAgent, collects, uses and shares personal data under UK GDPR and the Data Protection Act 2018.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://surveyagent.co.uk/privacy">
+  <meta property="og:title" content="Privacy Policy | SurveyAgent">
+  <meta property="og:description" content="How Quantica Labs Ltd, trading as SurveyAgent, collects, uses and shares personal data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://surveyagent.co.uk/privacy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='2' width='28' height='28' rx='6' stroke='%23f27f0c' stroke-width='2.5'/%3E%3Cpath d='M10 22V14L16 10L22 14V22' stroke='%23f27f0c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='3' stroke='%23f27f0c' stroke-width='2'/%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --navy: #1b294a;
+      --navy-dark: #111c36;
+      --navy-deeper: #0a1225;
+      --orange: #f27f0c;
+      --orange-hover: #d96f08;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-200: #e2e5eb;
+      --gray-400: #8b95a5;
+      --gray-500: #6b7688;
+      --gray-600: #4a5568;
+      --gray-700: #2d3748;
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.375rem);
+      --text-xl: clamp(1.375rem, 1.1rem + 1.2vw, 2rem);
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius-md: 0.625rem;
+      --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+      color: var(--gray-700);
+      background-color: var(--white);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity var(--transition-fast);
+    }
+    .nav-logo:hover { opacity: 0.7; }
+    .nav-logo svg { width: 30px; height: 30px; }
+    .nav-logo .wordmark {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-back {
+      font-size: var(--text-sm);
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color var(--transition-fast);
+      font-weight: 500;
+    }
+    .nav-back:hover { color: var(--navy); }
+    .nav-back svg {
+      width: 16px; height: 16px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.575rem 1.25rem;
+      background: var(--orange);
+      color: var(--white);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-cta:hover {
+      background: var(--orange-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(242,127,12,0.3);
+    }
+
+    .sales-hero {
+      background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 50%, var(--navy-deeper) 100%);
+      padding: clamp(3rem, 6vw, 4.5rem) 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sales-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 500px 350px at 65% 30%, rgba(242,127,12,0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 250px at 35% 80%, rgba(242,127,12,0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sales-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+    }
+    .sales-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .sales-hero h1 {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .sales-hero p {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.55);
+      line-height: 1.55;
+    }
+
+    .section {
+      padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
+    }
+    .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .policy h2 {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin: 2.25rem 0 0.75rem;
+    }
+    .policy h2:first-child { margin-top: 0; }
+    .policy h3 {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--navy);
+      margin: 1.25rem 0 0.5rem;
+    }
+    .policy p,
+    .policy li {
+      font-size: var(--text-sm);
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .policy p + p { margin-top: 0.85rem; }
+    .policy ul {
+      margin: 0.75rem 0 0 1.15rem;
+    }
+    .policy li { margin: 0.4rem 0; }
+    .policy a {
+      color: var(--orange);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .policy a:hover { color: var(--orange-hover); }
+
+    .footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--gray-200);
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-logo svg { width: 26px; height: 26px; }
+    .footer-logo .wordmark {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: var(--text-xs);
+    }
+    .footer-links a {
+      color: var(--gray-500);
+      transition: color var(--transition-fast);
+      font-weight: 500;
+    }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-copy {
+      font-size: var(--text-xs);
+      color: var(--gray-400);
+    }
+
+    @media (max-width: 540px) {
+      .nav-inner { height: 52px; }
+      .nav { padding: 0 1.25rem; }
+      .nav-back span { display: none; }
+      .section { padding: clamp(2rem, 5vw, 3rem) 1.25rem; }
+      .sales-hero { padding: clamp(2.5rem, 6vw, 3.5rem) 1.25rem; }
+      .footer-links { gap: 1rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="/" class="nav-logo" aria-label="SurveyAgent home">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="6" stroke="#f27f0c" stroke-width="2.5"/><path d="M10 22V14L16 10L22 14V22" stroke="#f27f0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#f27f0c" stroke-width="2"/></svg>
+          <span class="wordmark">SurveyAgent</span>
+        </a>
+        <a href="/" class="nav-back">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          <span>Back to SurveyAgent</span>
+        </a>
+      </div>
+      <a href="https://app.surveyagent.co.uk" class="btn-cta">Login</a>
+    </div>
+  </nav>
+
+  <header class="sales-hero">
+    <div class="sales-hero-content">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: 24 August 2026</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="section-inner policy">
+      <h2>1. Who we are</h2>
+      <p>This policy is issued by <strong>Quantica Labs Ltd</strong>, trading as <strong>SurveyAgent</strong> (“we”, “us”, “our”). We provide a CRM, diary, invoicing and lead-handling product for property professionals in the UK.</p>
+      <p>Our websites are <a href="https://surveyagent.co.uk/">https://surveyagent.co.uk/</a> (this marketing site) and <a href="https://app.surveyagent.co.uk/">https://app.surveyagent.co.uk/</a> (the SurveyAgent application).</p>
+      <p>This policy is written to UK data protection law: the UK GDPR and the Data Protection Act 2018.</p>
+
+      <h2>2. How to contact us</h2>
+      <p>For privacy questions or to exercise your rights, email <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a>.</p>
+      <p>We do not publish a registered office, company number or ICO registration number on this website. Please contact us by email only.</p>
+
+      <h2>3. Our role: controller or processor</h2>
+      <p>We are the <strong>controller</strong> of personal data about:</p>
+      <ul>
+        <li>people who create a SurveyAgent account (surveyors, referrers and relationship managers);</li>
+        <li>people who contact us (for example through the Book a Demo or partner application forms on this website); and</li>
+        <li>visitors to our websites, to the limited extent described below.</li>
+      </ul>
+      <p>When a surveying firm (or other customer) uses SurveyAgent to store and process their clients’ and leads’ details, that firm is the <strong>controller</strong> of that client data. We act as their <strong>processor</strong>. If you are a homebuyer or other client of a surveying firm, please contact that firm first about your personal data. You can also email us and we will help where we can.</p>
+
+      <h2>4. Personal data we process as controller</h2>
+      <h3>Account holders</h3>
+      <p>If you register for SurveyAgent we process the details you give us and that are created by using the product, including:</p>
+      <ul>
+        <li>name and email address;</li>
+        <li>login details (we store a password in hashed form, not in plain text);</li>
+        <li>firm or company name, where you provide it;</li>
+        <li>billing and subscription information handled through Stripe (we do not store full card numbers); and</li>
+        <li>support messages you send us.</li>
+      </ul>
+
+      <h3>People who contact us</h3>
+      <p>If you use the Book a Demo form we collect your name, email address and, if you provide them, company name, phone number and notes. If you apply to become a Relationship Manager we collect your name, email address and, if you provide them, phone number, background and how you heard about us. These forms are sent to our application at app.surveyagent.co.uk.</p>
+
+      <h3>Website visitors</h3>
+      <p>This marketing site is static HTML. It does not use advertising pixels, analytics products or a cookie-banner tool. We do not set first-party tracking cookies.</p>
+      <p>Our hosting provider may keep ordinary web-server logs (such as IP address, browser type, pages requested and date/time). We load the Inter typeface from Google Fonts. Google may process technical data such as your IP address in order to serve those files. See <a href="#cookies">Cookies</a> below.</p>
+      <p>The SurveyAgent application at app.surveyagent.co.uk uses cookies and similar storage that are needed to keep you signed in and to run the product.</p>
+
+      <h2>5. Personal data we process as processor for surveying firms</h2>
+      <p>When a firm uses SurveyAgent, we process personal data they put into the product, or that is sent in on their behalf, so we can provide the service. This typically includes:</p>
+      <ul>
+        <li>client and lead details — names, email addresses, phone numbers, property addresses, and job or diary information;</li>
+        <li>emails sent on the firm’s behalf, including where the firm connects a Gmail mailbox;</li>
+        <li>SMS messages the firm asks us to send;</li>
+        <li>invoices, quotes and payment records;</li>
+        <li>contacts, invoices and payments synced with Xero, if the firm connects Xero; and</li>
+        <li>inbound leads from sources the firm uses, such as Reallymoving and Pinlocal.</li>
+      </ul>
+      <p>If a firm chooses to connect Gmail (“Connect Gmail”), we use that connection to send emails on the firm’s behalf as part of SurveyAgent. We do not use Gmail content for advertising, and we do not sell it. A firm can disconnect Gmail at any time in the product.</p>
+
+      <h2>6. Why we use personal data</h2>
+      <p>As controller, we use personal data to:</p>
+      <ul>
+        <li>provide the CRM, diary, invoicing and lead product, and the related account;</li>
+        <li>send emails and SMS that a firm asks us to send;</li>
+        <li>take subscription and other payments, and keep accounting records;</li>
+        <li>respond to demo requests, partner applications and support queries;</li>
+        <li>keep the service secure and deal with misuse; and</li>
+        <li>meet legal obligations (for example tax and accounting rules).</li>
+      </ul>
+      <p>The legal bases we rely on are usually:</p>
+      <ul>
+        <li><strong>contract</strong> — to provide the service you have asked for;</li>
+        <li><strong>legitimate interests</strong> — for example security, support, and following up a demo or partner enquiry you submitted;</li>
+        <li><strong>legal obligation</strong> — where the law requires us to keep records; and</li>
+        <li><strong>consent</strong> — where the law requires it (for example where a firm chooses to connect Gmail).</li>
+      </ul>
+      <p>As processor, we use client and lead data only on the firm’s instructions, to provide SurveyAgent.</p>
+
+      <h2>7. Who we share data with</h2>
+      <p>We share personal data with service providers who help us run SurveyAgent, and only as needed for that purpose. That includes:</p>
+      <ul>
+        <li><strong>Stripe</strong> — subscriptions, payment links and payouts;</li>
+        <li><strong>Xero</strong> — invoicing and accounting sync, if a firm connects it;</li>
+        <li><strong>email and SMS providers</strong> — to send the messages a firm requests;</li>
+        <li><strong>Google (Gmail)</strong> — only if a firm connects their mailbox;</li>
+        <li><strong>hosting and infrastructure providers</strong> — to host this website and the application (this may include services such as Render);</li>
+        <li><strong>lead-source webhooks</strong> — such as Reallymoving and Pinlocal, so inbound leads can be received into the product; and</li>
+        <li>professional advisers or public authorities where we are legally required to share data.</li>
+      </ul>
+      <p>We do not sell personal data.</p>
+
+      <h2>8. International transfers</h2>
+      <p>Some of the providers above are based outside the UK, or may store or access data outside the UK. This marketing-site repository does not contain a complete list of subprocessors or the countries they use.</p>
+      <p>Where personal data is transferred outside the UK, we will use a lawful transfer mechanism. That typically means the UK’s adequacy regulations, or appropriate safeguards such as the UK International Data Transfer Agreement or the International Data Transfer Addendum to the EU Standard Contractual Clauses.</p>
+
+      <h2>9. How long we keep data</h2>
+      <p>We keep account-holder data for the life of the account, and for as long as we need it afterwards for legal claims, security or accounting (including records that tax law requires us to keep). We then delete or anonymise it.</p>
+      <p>Client and lead data held for a surveying firm is retained for as long as that firm’s account needs it. If a firm closes their account, we delete or anonymise that data after any short period needed to complete the closure, unless the law requires us to keep it longer.</p>
+      <p>Server logs, if retained by our host, are kept only for a short operational period.</p>
+
+      <h2>10. Your rights</h2>
+      <p>Under UK GDPR you have the right, in the circumstances the law sets out, to:</p>
+      <ul>
+        <li>access the personal data we hold about you;</li>
+        <li>have inaccurate data corrected (rectification);</li>
+        <li>have data erased;</li>
+        <li>restrict how we use your data;</li>
+        <li>receive your data in a portable format (data portability);</li>
+        <li>object to processing based on legitimate interests; and</li>
+        <li>complain to the Information Commissioner’s Office (ICO).</li>
+      </ul>
+      <p>To exercise these rights, email <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a>. If we are processing your data only as a processor for a surveying firm, we will pass your request to that firm or tell you how to contact them.</p>
+      <p>You can complain to the ICO at <a href="https://ico.org.uk" rel="noopener noreferrer">ico.org.uk</a>. We would be grateful if you contacted us first so we can try to put things right.</p>
+
+      <h2 id="cookies">11. Cookies</h2>
+      <p>This marketing website does not set first-party cookies for advertising or analytics, and it does not use a cookie-consent banner. There is no extra tracking on this page.</p>
+      <p>What this site does use:</p>
+      <ul>
+        <li><strong>Google Fonts</strong> — we load fonts from Google’s servers. That request may include your IP address and browser details. It is not something we use to identify you.</li>
+        <li><strong>Hosting logs</strong> — ordinary server logs as described above. These are not cookies.</li>
+      </ul>
+      <p>If you sign in to the SurveyAgent application, that app uses cookies (and similar storage) that are necessary to operate your session and the product. Those are first-party cookies for the app, not advertising cookies on this marketing site.</p>
+
+      <h2>12. Changes to this policy</h2>
+      <p>We may update this policy from time to time. The “Last updated” date at the top of this page will change when we do. The current version will always be published at <a href="https://surveyagent.co.uk/privacy">https://surveyagent.co.uk/privacy</a>.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="6" stroke="#f27f0c" stroke-width="2.5"/><path d="M10 22V14L16 10L22 14V22" stroke="#f27f0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#f27f0c" stroke-width="2"/></svg>
+        <span class="wordmark">SurveyAgent</span>
+      </div>
+      <div class="footer-copy">A product by Quantica Labs Ltd</div>
+      <div class="footer-links">
+        <a href="/privacy" aria-current="page">Privacy Policy</a>
+        <a href="/partner">Become a Relationship Manager</a>
+        <a href="mailto:info@surveyagent.co.uk">Contact</a>
+        <a href="https://app.surveyagent.co.uk">Login</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Quantica Labs Ltd</div>
+    </div>
+  </footer>
+</body>
+</html>
