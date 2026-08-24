@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | SurveyAgent</title>
-  <meta name="description" content="How Quantica Labs Ltd, trading as SurveyAgent, collects, uses and shares personal data under UK GDPR and the Data Protection Act 2018.">
+  <meta name="description" content="Official Privacy Policy for Quantica Labs Ltd — SurveyAgent. How we collect, use, store and protect personal data under UK GDPR and the Data Protection Act 2018.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://surveyagent.co.uk/privacy">
   <meta property="og:title" content="Privacy Policy | SurveyAgent">
-  <meta property="og:description" content="How Quantica Labs Ltd, trading as SurveyAgent, collects, uses and shares personal data.">
+  <meta property="og:description" content="Official Privacy Policy for Quantica Labs Ltd — SurveyAgent, under UK GDPR and the Data Protection Act 2018.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://surveyagent.co.uk/privacy">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,7 @@
       --orange-hover: #d96f08;
       --white: #ffffff;
       --gray-50: #f8f9fb;
+      --gray-100: #f0f2f5;
       --gray-200: #e2e5eb;
       --gray-400: #8b95a5;
       --gray-500: #6b7688;
@@ -184,7 +185,7 @@
       padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
     }
     .section-inner {
-      max-width: 720px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -204,7 +205,10 @@
       margin: 1.25rem 0 0.5rem;
     }
     .policy p,
-    .policy li {
+    .policy li,
+    .policy dd,
+    .policy td,
+    .policy th {
       font-size: var(--text-sm);
       color: var(--gray-600);
       line-height: 1.7;
@@ -221,6 +225,57 @@
       text-underline-offset: 2px;
     }
     .policy a:hover { color: var(--orange-hover); }
+
+    .policy-dl {
+      margin: 1rem 0 0;
+      display: grid;
+      grid-template-columns: minmax(8.5rem, 13rem) 1fr;
+      gap: 0.45rem 1rem;
+    }
+    .policy-dl dt {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .policy-dl dd { margin: 0; }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      -webkit-overflow-scrolling: touch;
+    }
+    .policy table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 36rem;
+    }
+    .policy th,
+    .policy td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.7rem 0.85rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .policy th {
+      background: var(--gray-50);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .policy tr:last-child td { border-bottom: none; }
+
+    .policy-note {
+      margin-top: 0.85rem;
+      padding: 0.85rem 1rem;
+      background: var(--gray-50);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
 
     .footer {
       padding: 2rem 1.5rem;
@@ -266,6 +321,12 @@
       color: var(--gray-400);
     }
 
+    @media (max-width: 640px) {
+      .policy-dl { grid-template-columns: 1fr; gap: 0.15rem 0; }
+      .policy-dl dt { margin-top: 0.65rem; }
+      .policy-dl dt:first-child { margin-top: 0; }
+    }
+
     @media (max-width: 540px) {
       .nav-inner { height: 52px; }
       .nav { padding: 0 1.25rem; }
@@ -295,128 +356,217 @@
 
   <header class="sales-hero">
     <div class="sales-hero-content">
-      <h1>Privacy Policy</h1>
-      <p>Last updated: 24 August 2026</p>
+      <h1>Privacy Policy &amp; GDPR Compliance</h1>
+      <p>Quantica Labs Ltd — SurveyAgent Platform<br>Last updated: 24 August 2026</p>
     </div>
   </header>
 
   <main class="section">
     <article class="section-inner policy">
-      <h2>1. Who we are</h2>
-      <p>This policy is issued by <strong>Quantica Labs Ltd</strong>, trading as <strong>SurveyAgent</strong> (“we”, “us”, “our”). We provide a CRM, diary, invoicing and lead-handling product for property professionals in the UK.</p>
-      <p>Our websites are <a href="https://surveyagent.co.uk/">https://surveyagent.co.uk/</a> (this marketing site) and <a href="https://app.surveyagent.co.uk/">https://app.surveyagent.co.uk/</a> (the SurveyAgent application).</p>
-      <p>This policy is written to UK data protection law: the UK GDPR and the Data Protection Act 2018.</p>
+      <h2>1. Introduction</h2>
+      <p>Quantica Labs Ltd (“we”, “us”, “our”) is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal data when you use the SurveyAgent platform (“the Service”), in accordance with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and all applicable data protection legislation.</p>
+      <dl class="policy-dl">
+        <dt>Data Controller</dt>
+        <dd>Quantica Labs Ltd (Company No. 17124284, incorporated in England &amp; Wales)</dd>
+        <dt>Registered Office</dt>
+        <dd>14a Mill Close, Borrowash, Derby, England, DE72 3GU</dd>
+        <dt>Contact Email</dt>
+        <dd><a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a></dd>
+        <dt>Contact Telephone</dt>
+        <dd><a href="tel:07964588513">07964 588513</a></dd>
+        <dt>Data Protection Contact</dt>
+        <dd>Benjamin James Naylor, Director</dd>
+        <dt>ICO Registration Number</dt>
+        <dd>Pending — application submitted July 2026</dd>
+      </dl>
 
-      <h2>2. How to contact us</h2>
-      <p>For privacy questions or to exercise your rights, email <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a>.</p>
-      <p>We do not publish a registered office, company number or ICO registration number on this website. Please contact us by email only.</p>
-
-      <h2>3. Our role: controller or processor</h2>
-      <p>We are the <strong>controller</strong> of personal data about:</p>
+      <h2>2. Data We Collect</h2>
+      <p>We collect and process the following categories of personal data:</p>
       <ul>
-        <li>people who create a SurveyAgent account (surveyors, referrers and relationship managers);</li>
-        <li>people who contact us (for example through the Book a Demo or partner application forms on this website); and</li>
-        <li>visitors to our websites, to the limited extent described below.</li>
+        <li><strong>Account Information:</strong> Name, email address, telephone number, business name, and professional role</li>
+        <li><strong>Authentication Data:</strong> Encrypted password credentials (bcrypt-hashed, never stored in plaintext), session tokens, and optional two-factor authentication (TOTP) secrets</li>
+        <li><strong>Business Data:</strong> Survey leads, job details, pricing information, service areas, and related correspondence entered into the platform by users</li>
+        <li><strong>Transaction Data:</strong> Payment records, Stripe account identifiers, commission calculations, and invoice references</li>
+        <li><strong>Usage Data:</strong> Login timestamps, IP addresses, user-agent strings, and pages visited within the platform (retained in security audit logs)</li>
+        <li><strong>Communication Data:</strong> Emails and SMS messages sent through the platform’s automated notification system (e.g., lead alerts, quote notifications, booking confirmations)</li>
       </ul>
-      <p>When a surveying firm (or other customer) uses SurveyAgent to store and process their clients’ and leads’ details, that firm is the <strong>controller</strong> of that client data. We act as their <strong>processor</strong>. If you are a homebuyer or other client of a surveying firm, please contact that firm first about your personal data. You can also email us and we will help where we can.</p>
 
-      <h2>4. Personal data we process as controller</h2>
-      <h3>Account holders</h3>
-      <p>If you register for SurveyAgent we process the details you give us and that are created by using the product, including:</p>
+      <h2>3. Legal Basis for Processing</h2>
+      <p>We process your personal data under the following lawful bases:</p>
       <ul>
-        <li>name and email address;</li>
-        <li>login details;</li>
-        <li>firm or company name, where you provide it;</li>
-        <li>billing and subscription information handled through Stripe (we do not store full card numbers); and</li>
-        <li>support messages you send us.</li>
+        <li><strong>Contract Performance (Article 6(1)(b)):</strong> Processing necessary for the performance of the contract between you and Quantica Labs Ltd for the provision of the SurveyAgent service</li>
+        <li><strong>Legitimate Interests (Article 6(1)(f)):</strong> Processing necessary for the operation, security, and improvement of the platform, including audit logging and fraud prevention</li>
+        <li><strong>Consent (Article 6(1)(a)):</strong> Where you have given specific consent for particular processing activities</li>
+        <li><strong>Legal Obligation (Article 6(1)(c)):</strong> Where processing is necessary to comply with a legal obligation, including HMRC record-keeping requirements</li>
       </ul>
 
-      <h3>People who contact us</h3>
-      <p>If you use the Book a Demo form we collect your name, email address and, if you provide them, company name, phone number and notes. If you apply to become a Relationship Manager we collect your name, email address and, if you provide them, phone number, background and how you heard about us. These forms are sent to our application at app.surveyagent.co.uk.</p>
-
-      <h3>Website visitors</h3>
-      <p>This marketing site is static HTML. It does not use advertising pixels, analytics products or a cookie-banner tool. We do not set first-party tracking cookies.</p>
-      <p>Our hosting provider may keep ordinary web-server logs (such as IP address, browser type, pages requested and date/time). We load the Inter typeface from Google Fonts. Google may process technical data such as your IP address in order to serve those files. See <a href="#cookies">Cookies</a> below.</p>
-      <p>The SurveyAgent application at app.surveyagent.co.uk uses cookies and similar storage that are needed to keep you signed in and to run the product.</p>
-
-      <h2>5. Personal data we process as processor for surveying firms</h2>
-      <p>When a firm uses SurveyAgent, we process personal data they put into the product, or that is sent in on their behalf, so we can provide the service. This typically includes:</p>
+      <h2>4. How We Use Your Data</h2>
+      <p>Your personal data is used exclusively for the following purposes:</p>
       <ul>
-        <li>client and lead details — names, email addresses, phone numbers, property addresses, and job or diary information;</li>
-        <li>emails sent on the firm’s behalf, including where the firm connects a Gmail mailbox;</li>
-        <li>SMS messages the firm asks us to send;</li>
-        <li>invoices, quotes and payment records;</li>
-        <li>contacts, invoices and payments synced with Xero, if the firm connects Xero; and</li>
-        <li>inbound leads from sources the firm uses, such as Reallymoving and Pinlocal.</li>
+        <li>Providing and maintaining the SurveyAgent platform and its core functionality</li>
+        <li>Managing your account, authentication, and access permissions</li>
+        <li>Processing and distributing survey leads between platform users</li>
+        <li>Facilitating payment processing, commission calculations, and financial reconciliation</li>
+        <li>Sending platform notifications related to leads, bookings, and account activity</li>
+        <li>Providing customer support and resolving technical issues</li>
+        <li>Ensuring platform security, detecting suspicious activity, and preventing unauthorised access</li>
       </ul>
-      <p>If a firm chooses to connect Gmail (“Connect Gmail”), we use that connection to send emails on the firm’s behalf as part of SurveyAgent. We do not use Gmail content for advertising, and we do not sell it. A firm can disconnect Gmail at any time in the product.</p>
 
-      <h2>6. Why we use personal data</h2>
-      <p>As controller, we use personal data to:</p>
+      <h2>5. Sub-Processors and Third-Party Services</h2>
+      <p><strong>Quantica Labs Ltd does not share, sell, rent, or disclose your personal data to any third party for marketing, advertising, analytics, or profiling purposes.</strong></p>
+      <p>The following sub-processors are used solely to operate the Service. Each is bound by a Data Processing Agreement (or equivalent contractual terms) that requires them to process personal data only on our documented instructions and to apply appropriate technical and organisational security measures:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Sub-processor</th>
+              <th>Purpose</th>
+              <th>Data categories</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Render Services, Inc.</strong></td>
+              <td>Application hosting, database hosting, log storage</td>
+              <td>All platform data</td>
+              <td>United States (Oregon)</td>
+            </tr>
+            <tr>
+              <td><strong>Stripe Payments Europe Ltd</strong></td>
+              <td>Payment card processing and subscription billing</td>
+              <td>Cardholder data, transaction records, billing contact</td>
+              <td>Ireland / United States</td>
+            </tr>
+            <tr>
+              <td><strong>Resend, Inc.</strong></td>
+              <td>Transactional email delivery</td>
+              <td>Recipient email, name, message contents</td>
+              <td>United States</td>
+            </tr>
+            <tr>
+              <td><strong>The SMS Works Ltd</strong></td>
+              <td>Transactional SMS delivery</td>
+              <td>Recipient mobile number, message contents</td>
+              <td>United Kingdom</td>
+            </tr>
+            <tr>
+              <td><strong>Vapi, Inc.</strong></td>
+              <td>Voice AI call handling (where activated by the firm)</td>
+              <td>Caller phone number, call transcripts, recordings</td>
+              <td>United States</td>
+            </tr>
+            <tr>
+              <td><strong>HaveIBeenPwned</strong></td>
+              <td>Breached-password detection (anonymised k-anonymity check)</td>
+              <td>Truncated SHA-1 hash prefix only; no email, name, or full password is transmitted</td>
+              <td>Australia / United Kingdom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Independent controllers.</strong> Where you connect your Xero accounting account to SurveyAgent, Xero (Xero (UK) Limited) acts as an independent data controller for the accounting records held in your Xero organisation. Data written from SurveyAgent into Xero (invoices, contacts, payments) is thereafter governed by Xero’s own privacy policy in addition to ours.</p>
+      <p>We will notify registered platform users of any material change to this sub-processor list at least 30 days before it takes effect, unless the change is required for security or legal reasons in which case notice will be given as soon as practicable.</p>
+
+      <h2>6. Data Storage and Security</h2>
+      <p>We apply the following technical and organisational measures to protect your personal data:</p>
       <ul>
-        <li>provide the CRM, diary, invoicing and lead product, and the related account;</li>
-        <li>send emails and SMS that a firm asks us to send;</li>
-        <li>take subscription and other payments, and keep accounting records;</li>
-        <li>respond to demo requests, partner applications and support queries;</li>
-        <li>keep the service secure and deal with misuse; and</li>
-        <li>meet legal obligations (for example tax and accounting rules).</li>
+        <li><strong>Encryption in transit:</strong> All traffic between your browser and our servers is encrypted using TLS 1.2 or higher; HTTP Strict Transport Security (HSTS) is enforced with a one-year policy on all subdomains.</li>
+        <li><strong>Encryption at rest:</strong> Sensitive third-party access tokens (e.g., Xero OAuth refresh tokens) are encrypted with AES-256-GCM using a per-installation encryption key held only in production infrastructure.</li>
+        <li><strong>Password protection:</strong> User passwords are salted and hashed using bcrypt with a cost factor of 12. Passwords found in known public data breaches are automatically rejected at registration and password change (using the HaveIBeenPwned k-anonymity API, which never receives the full password).</li>
+        <li><strong>Brute-force protection:</strong> Login endpoints are rate-limited per IP address and per user account. Accounts are temporarily locked after 10 failed login attempts with progressive backoff.</li>
+        <li><strong>Session security:</strong> Session cookies are HttpOnly, Secure, and SameSite=Lax. Sessions expire after 30 days of inactivity and are invalidated on password change.</li>
+        <li><strong>Two-factor authentication:</strong> TOTP-based two-factor authentication is available for all users and required for account owners and super-administrators.</li>
+        <li><strong>Security headers:</strong> All application responses include a Content Security Policy, X-Frame-Options: DENY (via frame-ancestors), X-Content-Type-Options: nosniff, and Referrer-Policy: strict-origin-when-cross-origin.</li>
+        <li><strong>Audit logging:</strong> Security-relevant events (logins, password changes, administrative actions, data exports, deletions) are recorded in an append-only audit log retained for a minimum of 12 months.</li>
+        <li><strong>PII redaction in logs:</strong> Application request logs automatically redact passwords, tokens, hashes, authorisation headers, and mask email addresses and phone numbers before storage.</li>
+        <li><strong>Access controls:</strong> Access to production databases is restricted to authorised personnel via key-based authentication over TLS. Multi-tenant isolation is enforced at the application layer by account and firm identifiers on every query.</li>
+        <li><strong>Backups:</strong> Production databases are backed up automatically by our hosting provider with encryption at rest. Backup retention follows the hosting provider’s Pro plan schedule.</li>
       </ul>
-      <p>The legal bases we rely on are usually:</p>
+
+      <h2>7. Data Retention</h2>
       <ul>
-        <li><strong>contract</strong> — to provide the service you have asked for;</li>
-        <li><strong>legitimate interests</strong> — for example security, support, and following up a demo or partner enquiry you submitted;</li>
-        <li><strong>legal obligation</strong> — where the law requires us to keep records; and</li>
-        <li><strong>consent</strong> — where the law requires it (for example where a firm chooses to connect Gmail).</li>
+        <li><strong>Active accounts:</strong> Personal data is retained for the duration of your active use of the Service.</li>
+        <li><strong>Inactive accounts:</strong> Data associated with deactivated accounts is retained for 12 months following deactivation, after which it may be permanently deleted.</li>
+        <li><strong>Deleted accounts:</strong> Upon a verified account deletion request, personal data is permanently removed within 30 days, subject to overriding legal retention requirements.</li>
+        <li><strong>Financial records:</strong> Invoices, payment records, and commission records are retained for 6 years plus the current tax year in accordance with HMRC requirements, even where an account is otherwise deleted. Deletion requests will result in pseudonymisation of the personal identifiers within these records rather than full erasure where full erasure would breach a legal obligation.</li>
+        <li><strong>Audit logs:</strong> Security audit records are retained for a minimum of 12 months to enable breach detection and investigation.</li>
       </ul>
-      <p>As processor, we use client and lead data only on the firm’s instructions, to provide SurveyAgent.</p>
 
-      <h2>7. Who we share data with</h2>
-      <p>We share personal data with service providers who help us run SurveyAgent, and only as needed for that purpose. That includes:</p>
+      <h2>8. Your Rights Under UK GDPR</h2>
+      <p>You have the following rights regarding your personal data:</p>
       <ul>
-        <li><strong>Stripe</strong> — subscriptions, payment links and payouts;</li>
-        <li><strong>Xero</strong> — invoicing and accounting sync, if a firm connects it;</li>
-        <li><strong>email and SMS providers</strong> — to send the messages a firm requests;</li>
-        <li><strong>Google (Gmail)</strong> — only if a firm connects their mailbox;</li>
-        <li><strong>hosting and infrastructure providers</strong> — to host this website and the application (this may include services such as Render);</li>
-        <li><strong>lead-source webhooks</strong> — such as Reallymoving and Pinlocal, so inbound leads can be received into the product; and</li>
-        <li>professional advisers or public authorities where we are legally required to share data.</li>
+        <li><strong>Right of Access (Article 15):</strong> You may request a copy of all personal data we hold about you.</li>
+        <li><strong>Right to Rectification (Article 16):</strong> You may request correction of any inaccurate or incomplete personal data.</li>
+        <li><strong>Right to Erasure (Article 17):</strong> You may request deletion of your personal data, subject to any overriding legal obligations.</li>
+        <li><strong>Right to Restrict Processing (Article 18):</strong> You may request that we restrict processing of your personal data in certain circumstances.</li>
+        <li><strong>Right to Data Portability (Article 20):</strong> You may request a copy of your data in a structured, commonly used, machine-readable format (JSON).</li>
+        <li><strong>Right to Object (Article 21):</strong> You may object to processing based on legitimate interests.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, you may withdraw consent at any time.</li>
       </ul>
-      <p>We do not sell personal data.</p>
+      <p><strong>How to exercise these rights.</strong> Registered users can exercise the rights of access and portability directly from within the platform: <strong>Settings → Privacy &amp; Data → Download my data</strong>. Erasure requests can be raised from <strong>Settings → Privacy &amp; Data → Request account deletion</strong>; verified requests are actioned within 30 days. Alternatively, contact us at <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a>. We will respond to all requests within 30 days.</p>
 
-      <h2>8. International transfers</h2>
-      <p>Some of the providers above are based outside the UK, or may store or access data outside the UK. This marketing-site repository does not contain a complete list of subprocessors or the countries they use.</p>
-      <p>Where personal data is transferred outside the UK, we will use a lawful transfer mechanism. That typically means the UK’s adequacy regulations, or appropriate safeguards such as the UK International Data Transfer Agreement or the International Data Transfer Addendum to the EU Standard Contractual Clauses.</p>
-
-      <h2>9. How long we keep data</h2>
-      <p>We keep account-holder data for the life of the account, and for as long as we need it afterwards for legal claims, security or accounting (including records that tax law requires us to keep). We then delete or anonymise it.</p>
-      <p>Client and lead data held for a surveying firm is retained for as long as that firm’s account needs it. If a firm closes their account, we delete or anonymise that data after any short period needed to complete the closure, unless the law requires us to keep it longer.</p>
-      <p>Server logs, if retained by our host, are kept only for a short operational period.</p>
-
-      <h2>10. Your rights</h2>
-      <p>Under UK GDPR you have the right, in the circumstances the law sets out, to:</p>
+      <h2>9. User Responsibilities</h2>
+      <p>Each firm using the SurveyAgent platform is an independent data controller in respect of any personal data they input, manage, or process through the Service. This includes, but is not limited to:</p>
       <ul>
-        <li>access the personal data we hold about you;</li>
-        <li>have inaccurate data corrected (rectification);</li>
-        <li>have data erased;</li>
-        <li>restrict how we use your data;</li>
-        <li>receive your data in a portable format (data portability);</li>
-        <li>object to processing based on legitimate interests; and</li>
-        <li>complain to the Information Commissioner’s Office (ICO).</li>
+        <li>Lead information (names, addresses, contact details of prospective clients)</li>
+        <li>Client correspondence and notes</li>
+        <li>Staff and team member details</li>
       </ul>
-      <p>To exercise these rights, email <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a>. If we are processing your data only as a processor for a surveying firm, we will pass your request to that firm or tell you how to contact them.</p>
-      <p>You can complain to the ICO at <a href="https://ico.org.uk" rel="noopener noreferrer">ico.org.uk</a>. We would be grateful if you contacted us first so we can try to put things right.</p>
-
-      <h2 id="cookies">11. Cookies</h2>
-      <p>This marketing website does not set first-party cookies for advertising or analytics, and it does not use a cookie-consent banner. There is no extra tracking on this page.</p>
-      <p>What this site does use:</p>
+      <p><strong>Firms are solely responsible for:</strong></p>
       <ul>
-        <li><strong>Google Fonts</strong> — we load fonts from Google’s servers. That request may include your IP address and browser details. It is not something we use to identify you.</li>
-        <li><strong>Hosting logs</strong> — ordinary server logs as described above. These are not cookies.</li>
+        <li>Ensuring they have a lawful basis for processing any personal data they enter into the platform</li>
+        <li>Obtaining appropriate consent from data subjects where required</li>
+        <li>Maintaining their own GDPR compliance and (where applicable) ICO registration</li>
+        <li>Responding to data-subject access requests relating to data they control</li>
+        <li>Ensuring the accuracy of personal data they input</li>
+        <li>Complying with all applicable data protection laws in their jurisdiction</li>
       </ul>
-      <p>If you sign in to the SurveyAgent application, that app uses cookies (and similar storage) that are necessary to operate your session and the product. Those are first-party cookies for the app, not advertising cookies on this marketing site.</p>
+      <p>Quantica Labs Ltd acts as a data processor in respect of data entered by firms and processes such data only as necessary to provide the Service. A Data Processing Agreement is available on request.</p>
+      <p class="policy-note"><strong>Addition (24 August 2026) for firms that connect Gmail:</strong> where a firm connects a Gmail mailbox, we process emails sent on that firm’s behalf through the connected mailbox solely to provide the Service.</p>
 
-      <h2>12. Changes to this policy</h2>
-      <p>We may update this policy from time to time. The “Last updated” date at the top of this page will change when we do. The current version will always be published at <a href="https://surveyagent.co.uk/privacy">https://surveyagent.co.uk/privacy</a>.</p>
+      <h2>10. Data Breach Notification</h2>
+      <p>In the event of a personal data breach that poses a risk to the rights and freedoms of individuals, we will:</p>
+      <ul>
+        <li>Notify the Information Commissioner’s Office (ICO) within 72 hours of becoming aware of the breach</li>
+        <li>Notify affected individuals and affected firms (as controllers) without undue delay where the breach is likely to result in a high risk to their rights and freedoms</li>
+        <li>Document all data breaches, including their effects and remedial actions taken</li>
+      </ul>
+
+      <h2>11. Cookies and Tracking</h2>
+      <p>The SurveyAgent platform uses only essential, strictly necessary cookies:</p>
+      <ul>
+        <li><strong><code>sa_session</code></strong> — authenticated session cookie (HttpOnly, Secure, SameSite=Lax, 30-day expiry)</li>
+      </ul>
+      <p>We do not use analytics cookies, advertising cookies, tracking pixels, or third-party tracking scripts. No data is shared with Google Analytics, Meta, or any advertising or analytics platform.</p>
+
+      <h2>12. Children’s Data</h2>
+      <p>The SurveyAgent platform is a business-to-business service and is not intended for use by individuals under the age of 18. We do not knowingly collect personal data from minors.</p>
+
+      <h2>13. International Transfers</h2>
+      <p>Primary application data (including all customer records, leads, jobs, and audit logs) is hosted by Render Services, Inc. in the <strong>Frankfurt, Germany</strong> region — an adequate jurisdiction under UK GDPR (European Economic Area). No international transfer mechanism is required for data at rest.</p>
+      <p>Certain US-based sub-processors process limited data as follows:</p>
+      <ul>
+        <li><strong>Stripe Payments Europe Ltd</strong> (Ireland, controller) with Stripe, Inc. (US) as processor for card processing</li>
+        <li><strong>Resend, Inc.</strong> (US) — outbound email delivery</li>
+        <li><strong>Vapi Labs, Inc.</strong> (US) — AI phone assistant (optional add-on)</li>
+        <li><strong>OpenAI Ireland Ltd / OpenAI, L.L.C.</strong> (US) — AI transcription and prompt processing (optional add-on)</li>
+      </ul>
+      <p>Transfers to the US are protected by the UK Extension to the EU-US Data Privacy Framework where the recipient is self-certified, or otherwise by the ICO’s International Data Transfer Agreement (IDTA) / EU Standard Contractual Clauses combined with the UK Addendum.</p>
+      <p>We have carried out a Transfer Risk Assessment for each US-based sub-processor and consider the safeguards in place — combined with our own encryption at rest and access controls — adequate under UK GDPR Article 46. A copy of the Transfer Risk Assessment is available to controllers on request.</p>
+
+      <h2>14. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any material changes will be notified to registered users via the platform. Continued use of the Service following such notification constitutes acceptance of the updated policy.</p>
+      <p>The official platform policy dated 9 July 2026 is published here for public access. The only addition since that date is the Gmail-as-connected-mailbox sentence in section 9, dated 24 August 2026.</p>
+
+      <h2>15. Complaints</h2>
+      <p>If you have a complaint about how we handle your personal data, please contact us at <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a> or write to Quantica Labs Ltd, 14a Mill Close, Borrowash, Derby, DE72 3GU in the first instance. You also have the right to lodge a complaint with the Information Commissioner’s Office (ICO):</p>
+      <p>
+        <strong>Information Commissioner’s Office</strong><br>
+        Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF<br>
+        Website: <a href="https://ico.org.uk" rel="noopener noreferrer">https://ico.org.uk</a><br>
+        Telephone: <a href="tel:03031231113">0303 123 1113</a>
+      </p>
     </article>
   </main>
 
@@ -429,6 +579,7 @@
       <div class="footer-copy">A product by Quantica Labs Ltd</div>
       <div class="footer-links">
         <a href="/privacy" aria-current="page">Privacy Policy</a>
+        <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
         <a href="/partner">Become a Relationship Manager</a>
         <a href="mailto:info@surveyagent.co.uk">Contact</a>
         <a href="https://app.surveyagent.co.uk">Login</a>
