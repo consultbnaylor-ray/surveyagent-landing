@@ -925,6 +925,8 @@
 
     .footer-links {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       gap: 1.5rem;
       font-size: var(--text-xs);
@@ -941,6 +943,20 @@
       font-size: var(--text-xs);
       color: var(--gray-400);
     }
+
+    .footer-legal {
+      max-width: 40rem;
+      margin: 0;
+      padding: 0 0.75rem;
+      font-size: var(--text-xs);
+      color: var(--gray-400);
+      line-height: 1.45;
+    }
+    .footer-legal a {
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+    .footer-legal a:hover { color: var(--orange); }
 
     /* ===== MOBILE REFINEMENTS ===== */
     @media (max-width: 540px) {
@@ -1306,6 +1322,7 @@
         <a href="https://surveyagent.co.uk/terms">Terms of Service</a>
         <a href="mailto:info@surveyagent.co.uk">Contact</a>
       </div>
+      <p class="footer-legal">Quantica Labs Ltd is registered in England and Wales (company no. 17124284). Registered office: 14a Mill Close, Borrowash, Derby, DE72 3GU. <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a></p>
       <div class="footer-copy">&copy; 2026 Quantica Labs Ltd</div>
     </div>
   </footer>

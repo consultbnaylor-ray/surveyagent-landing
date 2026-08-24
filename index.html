@@ -114,7 +114,7 @@
       justify-content: center;
       background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 50%, var(--navy-deeper) 100%);
       position: relative;
-      padding: 1.5rem 1.5rem 3rem;
+      padding: 1.5rem 1.5rem 5.75rem;
     }
 
     /* Warm accent glow */
@@ -280,15 +280,22 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 1rem 1.5rem;
+      padding: 0.85rem 1.5rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.28);
+      z-index: 2;
+    }
+
+    .splash-footer .footer-links-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 0.75rem 1.5rem;
-      font-size: var(--text-xs);
-      color: rgba(255,255,255,0.28);
-      z-index: 2;
     }
 
     .splash-footer a {
@@ -297,6 +304,14 @@
       font-weight: 500;
     }
     .splash-footer a:hover { color: var(--orange); }
+
+    .splash-footer .footer-legal {
+      color: rgba(255,255,255,0.22);
+    }
+    .splash-footer .footer-legal a {
+      color: rgba(255,255,255,0.32);
+      font-weight: 500;
+    }
 
     /* ===== STICKY NAV ===== */
     .nav {
@@ -988,13 +1003,20 @@
       padding: 1.25rem;
       text-align: center;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: var(--text-xs);
+      color: var(--gray-400);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .footer .footer-links-row {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 0.75rem 1.5rem;
-      font-size: var(--text-xs);
-      color: var(--gray-400);
-      border-top: 1px solid var(--gray-200);
     }
 
     .footer a {
@@ -1003,6 +1025,14 @@
       font-weight: 500;
     }
     .footer a:hover { color: var(--orange); }
+
+    .footer-legal {
+      max-width: 40rem;
+      margin: 0;
+      line-height: 1.45;
+      padding: 0 0.75rem;
+    }
+    .footer-legal a { font-weight: 500; }
 
     /* ===== BOTTOM ROW (for 5-card grid) ===== */
     .benefit-bottom-row {
@@ -1022,7 +1052,7 @@
 
     /* ===== MOBILE REFINEMENTS ===== */
     @media (max-width: 540px) {
-      .splash { padding: 1.25rem 1.25rem 2.5rem; }
+      .splash { padding: 1.25rem 1.25rem 5.25rem; }
       .splash-logo svg { width: 36px; height: 36px; }
       .splash-logo .wordmark { font-size: var(--text-lg); }
       .splash-tagline { font-size: clamp(1.5rem, 0.8rem + 3.5vw, 2.25rem); }
@@ -1086,11 +1116,14 @@
       </div>
 
       <footer class="splash-footer">
-        <span>&copy; 2026 Quantica Labs Ltd</span>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
-        <a href="partner.html">Apply to Become a Relationship Manager</a>
-        <a href="https://app.surveyagent.co.uk">Login</a>
+        <div class="footer-links-row">
+          <span>&copy; 2026 Quantica Labs Ltd</span>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
+          <a href="partner.html">Apply to Become a Relationship Manager</a>
+          <a href="https://app.surveyagent.co.uk">Login</a>
+        </div>
+        <p class="footer-legal">Quantica Labs Ltd is registered in England and Wales (company no. 17124284). Registered office: 14a Mill Close, Borrowash, Derby, DE72 3GU. <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a></p>
       </footer>
     </div>
   </div>
@@ -1202,11 +1235,14 @@
     </section>
 
     <footer class="footer">
-      <span>&copy; 2026 Quantica Labs Ltd</span>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
-      <a href="partner.html">Apply to Become a Relationship Manager</a>
-      <a href="https://app.surveyagent.co.uk">Login</a>
+      <div class="footer-links-row">
+        <span>&copy; 2026 Quantica Labs Ltd</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
+        <a href="partner.html">Apply to Become a Relationship Manager</a>
+        <a href="https://app.surveyagent.co.uk">Login</a>
+      </div>
+      <p class="footer-legal">Quantica Labs Ltd is registered in England and Wales (company no. 17124284). Registered office: 14a Mill Close, Borrowash, Derby, DE72 3GU. <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a></p>
     </footer>
   </div>
 
@@ -1436,11 +1472,14 @@
     </section>
 
     <footer class="footer">
-      <span>&copy; 2026 Quantica Labs Ltd</span>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
-      <a href="partner.html">Apply to Become a Relationship Manager</a>
-      <a href="https://app.surveyagent.co.uk">Login</a>
+      <div class="footer-links-row">
+        <span>&copy; 2026 Quantica Labs Ltd</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://app.surveyagent.co.uk/terms">Terms of Service</a>
+        <a href="partner.html">Apply to Become a Relationship Manager</a>
+        <a href="https://app.surveyagent.co.uk">Login</a>
+      </div>
+      <p class="footer-legal">Quantica Labs Ltd is registered in England and Wales (company no. 17124284). Registered office: 14a Mill Close, Borrowash, Derby, DE72 3GU. <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a></p>
     </footer>
   </div>
 
