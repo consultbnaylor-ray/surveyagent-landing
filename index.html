@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://registry.blockmarktech.com;">
+  <script src="/cyber-essentials.js"></script>
   <title>SurveyAgent — The Leads Handling System for Property Professionals</title>
   <meta name="description" content="SurveyAgent helps estate agents, conveyancers, and surveyors manage leads, earn commissions, and streamline property surveys — all in one place.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,10 +113,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 50%, var(--navy-deeper) 100%);
       position: relative;
-      padding: 1.5rem 1.5rem 5.75rem;
+      padding: 1.5rem 1.5rem 1rem;
     }
 
     /* Warm accent glow */
@@ -146,6 +148,8 @@
       text-align: center;
       max-width: 680px;
       width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
     .splash-logo {
@@ -276,11 +280,10 @@
     }
 
     .splash-footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0.85rem 1.5rem 1.1rem;
+      position: relative;
+      width: 100%;
+      flex: 0 0 auto;
+      padding: 0.35rem 1rem 0.85rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1058,7 +1061,7 @@
 
     /* ===== MOBILE REFINEMENTS ===== */
     @media (max-width: 540px) {
-      .splash { padding: 1.25rem 1.25rem 5.25rem; }
+      .splash { padding: 1.25rem 1rem 0.75rem; }
       .splash-logo svg { width: 36px; height: 36px; }
       .splash-logo .wordmark { font-size: var(--text-lg); }
       .splash-tagline { font-size: clamp(1.5rem, 0.8rem + 3.5vw, 2.25rem); }
@@ -1122,6 +1125,7 @@
       </div>
 
       <footer class="splash-footer">
+        <cyber-essentials-badge></cyber-essentials-badge>
         <div class="footer-links-row">
           <span>&copy; 2026 Quantica Labs Ltd</span>
           <a href="privacy.html">Privacy Policy</a>
@@ -1241,6 +1245,7 @@
     </section>
 
     <footer class="footer">
+      <cyber-essentials-badge></cyber-essentials-badge>
       <div class="footer-links-row">
         <span>&copy; 2026 Quantica Labs Ltd</span>
         <a href="privacy.html">Privacy Policy</a>
@@ -1478,6 +1483,7 @@
     </section>
 
     <footer class="footer">
+      <cyber-essentials-badge></cyber-essentials-badge>
       <div class="footer-links-row">
         <span>&copy; 2026 Quantica Labs Ltd</span>
         <a href="privacy.html">Privacy Policy</a>
