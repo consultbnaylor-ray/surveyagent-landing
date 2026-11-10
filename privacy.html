@@ -372,7 +372,7 @@
   <header class="sales-hero">
     <div class="sales-hero-content">
       <h1>Privacy Policy &amp; GDPR Compliance</h1>
-      <p>Quantica Labs Ltd — SurveyAgent Platform<br>Last updated: 24 August 2026</p>
+      <p>Quantica Labs Ltd — SurveyAgent Platform<br>Last updated: 10 November 2026</p>
     </div>
   </header>
 
@@ -538,7 +538,7 @@
         <li>Complying with all applicable data protection laws in their jurisdiction</li>
       </ul>
       <p>Quantica Labs Ltd acts as a data processor in respect of data entered by firms and processes such data only as necessary to provide the Service. A Data Processing Agreement is available on request.</p>
-      <p class="policy-note"><strong>Addition (24 August 2026) for firms that connect Gmail:</strong> where a firm connects a Gmail mailbox, we process emails sent on that firm’s behalf through the connected mailbox solely to provide the Service.</p>
+      <p class="policy-note"><strong>Gmail connection:</strong> a firm may optionally connect Gmail so SurveyAgent can send messages from that account. Section 16 states which Google user data we receive and the Limited Use commitment. SurveyAgent does not read the mailbox.</p>
 
       <h2>10. Data Breach Notification</h2>
       <p>In the event of a personal data breach that poses a risk to the rights and freedoms of individuals, we will:</p>
@@ -572,7 +572,7 @@
 
       <h2>14. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Any material changes will be notified to registered users via the platform. Continued use of the Service following such notification constitutes acceptance of the updated policy.</p>
-      <p>The official platform policy dated 9 July 2026 is published here for public access. The only addition since that date is the Gmail-as-connected-mailbox sentence in section 9, dated 24 August 2026.</p>
+      <p>The platform policy dated 9 July 2026 is published in the sections above. Section 16 is the Gmail disclosure for the optional mailbox connection. It does not change those earlier sections.</p>
 
       <h2>15. Complaints</h2>
       <p>If you have a complaint about how we handle your personal data, please contact us at <a href="mailto:info@surveyagent.co.uk">info@surveyagent.co.uk</a> or write to Quantica Labs Ltd, 14a Mill Close, Borrowash, Derby, DE72 3GU in the first instance. You also have the right to lodge a complaint with the Information Commissioner’s Office (ICO):</p>
@@ -582,6 +582,32 @@
         Website: <a href="https://ico.org.uk" rel="noopener noreferrer">https://ico.org.uk</a><br>
         Telephone: <a href="tel:03031231113">0303 123 1113</a>
       </p>
+
+      <h2>16. Google API Services User Data (Gmail)</h2>
+      <p>A firm may optionally connect a Google account from Firm Settings, under the sending mailbox. Connecting Gmail is not required. Firms that do not connect Gmail send client email through SurveyAgent's platform email service, or through SMTP details they enter themselves.</p>
+      <h3>Permissions requested</h3>
+      <p>The Google authorisation request asks for only these permissions:</p>
+      <ul>
+        <li><a href="https://www.googleapis.com/auth/gmail.send">https://www.googleapis.com/auth/gmail.send</a> — send email from the connected account</li>
+        <li><a href="https://www.googleapis.com/auth/userinfo.email">https://www.googleapis.com/auth/userinfo.email</a> — read the connected account's email address so SurveyAgent can show it in Firm Settings</li>
+      </ul>
+      <p>Google's token response may name that email permission as <code>email</code>, and it may include <code>openid</code> (associate you with your personal info on Google). SurveyAgent treats those names as part of this email grant. It refuses to store the connection if Google returns any other permission, including profile, Gmail read, contacts, or calendar.</p>
+      <p>SurveyAgent uses the requested permissions to call Google's token endpoint, the userinfo email endpoint, and Gmail's send endpoint for the connected user. The application does not call Gmail APIs that read, list, search, modify, or delete mailbox contents.</p>
+      <h3>Google user data and messages written in SurveyAgent</h3>
+      <p>From Google APIs, SurveyAgent receives the connected account's email address, OAuth access and refresh tokens, the Gmail message id returned after a successful send, and error text if a token refresh fails.</p>
+      <p>Quote, terms, invoice, and booking messages are written in SurveyAgent from the firm's own lead and job records. When Gmail is the selected sender, that message is uploaded to Gmail so Gmail can send it. SurveyAgent does not download the message back from Gmail and does not read other mail in the account. Those message contents are application data supplied by the firm. They are not data read from the mailbox.</p>
+      <h3>How Google user data is used</h3>
+      <p>Google user data is used only to send mail the firm asks SurveyAgent to send, to show the connected address, and to refresh the access token while the mailbox stays connected. SurveyAgent does not sell Google user data and does not use it for advertising or analytics.</p>
+      <h3>Artificial intelligence</h3>
+      <p>Google user data is not sent to artificial intelligence or machine learning providers. It is not used to develop, improve, or train generalised or non-personalised AI or ML models.</p>
+      <p>Other features may use AI on data that does not come from Google APIs. This application can send a receipt image uploaded by a user to OpenAI at <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a> when an OpenAI API key is configured. The phone-assistant configuration in the SurveyAgent application names separate providers for calls. Neither feature receives Gmail tokens, the address returned by Google userinfo, or mailbox contents. This notice does not state those providers' commercial plans, tiers, or model-training settings. Those settings are not stored in SurveyAgent.</p>
+      <h3>Limited Use</h3>
+      <p>SurveyAgent's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      <h3>Storage, disconnect, and revocation</h3>
+      <p>Access tokens and refresh tokens are encrypted at rest. They are kept while the mailbox stays connected, together with the connected email address.</p>
+      <p>Disconnecting the mailbox in Firm Settings deletes the stored tokens, the connected address, and the related connection fields from SurveyAgent. Disconnect does not call Google's token revocation endpoint. The account holder can also remove SurveyAgent's access from <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.</p>
+      <p>The short-lived sign-in state used during connection is deleted when Google returns to SurveyAgent, or when it expires after ten minutes.</p>
+
     </article>
   </main>
 
