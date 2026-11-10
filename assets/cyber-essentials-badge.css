@@ -1,0 +1,28 @@
+/* Trust slot for the official 204×204 Blockmark widget.
+   The iframe keeps the size Blockmark specifies; this only centres it. */
+.ce-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0.35rem auto 0.15rem;
+}
+
+cyber-essentials-badge {
+  display: block;
+  width: 204px;
+  height: 204px;
+  max-width: 100%;
+  line-height: 0;
+  flex: 0 0 auto;
+}
+
+cyber-essentials-badge iframe {
+  display: block;
+}
+
+@media (max-width: 540px) {
+  .ce-trust {
+    margin: 0.5rem auto 0.35rem;
+  }
+}
