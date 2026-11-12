@@ -826,6 +826,66 @@
       color: var(--gray-400);
     }
 
+    /* ===== GOOGLE REVIEWS ===== */
+    .reviews-block {
+      text-align: center;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    .reviews-stars {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0 0.9rem;
+      color: var(--orange);
+    }
+
+    .reviews-stars svg {
+      width: 10.5rem;
+      height: auto;
+      display: block;
+    }
+
+    .reviews-summary {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .reviews-company {
+      margin-top: 0.35rem;
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    .reviews-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .reviews-actions a:focus-visible {
+      outline: 2px solid var(--navy);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 540px) {
+      .reviews-stars svg { width: 9rem; }
+      .reviews-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      .reviews-actions .btn-cta {
+        width: 100%;
+        max-width: 20rem;
+        justify-content: center;
+      }
+    }
+
     /* ===== CTA BAND ===== */
     .cta-band {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
@@ -1389,6 +1449,33 @@
             <div class="stat-value">From &pound;49<span style="font-size:0.4em;font-weight:400;opacity:0.75">/mo</span></div>
             <div class="stat-label">Simple Monthly Pricing</div>
             <div class="stat-desc">Free trial &middot; Cancel anytime</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOOGLE REVIEWS ===== -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="section-inner">
+        <div class="reviews-block" data-reveal>
+          <div class="section-label">Google reviews</div>
+          <h2 class="section-title" id="reviews-title">Rated 5.0 on Google</h2>
+          <div class="reviews-stars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 132 24" focusable="false" aria-hidden="true">
+              <g fill="currentColor">
+                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                <path transform="translate(27)" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                <path transform="translate(54)" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                <path transform="translate(81)" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                <path transform="translate(108)" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </g>
+            </svg>
+          </div>
+          <p class="reviews-summary">Rated 5.0 from 3 Google reviews</p>
+          <p class="reviews-company">for Quantica Labs Ltd, the company behind SurveyAgent and Spitfire.</p>
+          <div class="reviews-actions">
+            <a class="btn-cta btn-cta-lg" href="https://www.google.com/maps?cid=16801169828942697499" target="_blank" rel="noopener">Read our Google reviews<span class="sr-only"> (opens in a new tab)</span></a>
+            <a class="btn-cta btn-cta-lg btn-cta-outline" href="https://g.page/r/CRvUI2nxvinpEBM/review" target="_blank" rel="noopener">Leave a review<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
       </div>
