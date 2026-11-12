@@ -744,19 +744,6 @@
     }
 
     /* ===== GOOGLE REVIEWS ===== */
-    .btn-cta-outline {
-      background: transparent;
-      color: var(--orange);
-      border: 2px solid var(--orange);
-      padding: 0.65rem 1.55rem;
-    }
-    .btn-cta-outline:hover {
-      background: var(--orange);
-      color: var(--white);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(242,127,12,0.3);
-    }
-
     .reviews-block {
       text-align: center;
       max-width: 40rem;
@@ -792,10 +779,12 @@
 
     .reviews-actions {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 0.75rem;
       margin-top: 1.5rem;
+    }
+
+    .reviews-actions .btn-cta {
+      justify-content: center;
     }
 
     .reviews-actions a:focus-visible {
@@ -805,14 +794,8 @@
 
     @media (max-width: 540px) {
       .reviews-stars svg { width: 9rem; }
-      .reviews-actions {
-        flex-direction: column;
-        align-items: center;
-      }
       .reviews-actions .btn-cta {
-        width: 100%;
-        max-width: 20rem;
-        justify-content: center;
+        width: min(100%, 20rem);
       }
     }
 
@@ -1354,7 +1337,6 @@
         <p class="reviews-company">for Quantica Labs Ltd, the company behind SurveyAgent and Spitfire.</p>
         <div class="reviews-actions">
           <a class="btn-cta btn-cta-lg" href="https://www.google.com/maps?cid=16801169828942697499" target="_blank" rel="noopener">Read our Google reviews<span class="sr-only"> (opens in a new tab)</span></a>
-          <a class="btn-cta btn-cta-lg btn-cta-outline" href="https://g.page/r/CRvUI2nxvinpEBM/review" target="_blank" rel="noopener">Leave a review<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
     </div>
